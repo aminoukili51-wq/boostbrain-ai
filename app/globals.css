@@ -1,10 +1,20 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background: radial-gradient(circle at 20% 20%, #0ff, transparent 40%),
+              radial-gradient(circle at 80% 80%, #f0f, transparent 40%),
+              #000;
+  background-size: 200% 200%;
+  animation: aiGlow 8s infinite alternate ease-in-out;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background: #000;
-  color: #fff;
+@keyframes aiGlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }

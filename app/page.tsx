@@ -1,44 +1,52 @@
 "use client";
 
-import React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main
       style={{
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
-        background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
-        color: "#fff",
-        fontFamily: "Poppins, sans-serif",
+        alignItems: "center",
+        color: "white",
+        textAlign: "center",
       }}
     >
       <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>🚀 BoostBrain AI</h1>
-      <p style={{ fontSize: "1.2rem", maxWidth: "600px", textAlign: "center" }}>
-        Welkom bij mijn AI‑project! BoostBrain‑AI is gebouwd met Next.js en Vercel — een plek waar
-        technologie en creativiteit samenkomen. Nieuwe features volgen binnenkort!
+      <p style={{ maxWidth: "600px", marginBottom: "2rem" }}>
+        Welkom bij mijn AI‑platform. Kies een pagina hieronder.
       </p>
 
-      <a
-        href="https://github.com/aminoukili51-wq/boostbrain-ai"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          marginTop: "2rem",
-          padding: "0.8rem 1.5rem",
-          backgroundColor: "#00c6ff",
-          color: "#000",
-          borderRadius: "8px",
-          textDecoration: "none",
-          fontWeight: "bold",
-          transition: "0.3s",
-        }}
-      >
-        Bekijk op GitHub
-      </a>
+      <div style={{ display: "flex", gap: "20px" }}>
+        <Link
+          href="/intro"
+          style={{
+            padding: "12px 20px",
+            background: "#00c6ff",
+            borderRadius: "8px",
+            color: "black",
+            fontWeight: "bold",
+          }}
+        >
+          Intro
+        </Link>
+
+        <Link
+          href="/dashboard"
+          style={{
+            padding: "12px 20px",
+            background: "#ffdd00",
+            borderRadius: "8px",
+            color: "black",
+            fontWeight: "bold",
+          }}
+        >
+          Dashboard
+        </Link>
+      </div>
     </main>
   );
 }
