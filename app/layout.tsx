@@ -1,12 +1,18 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "BoostBrain AI",
   description: "AI powered platform",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
